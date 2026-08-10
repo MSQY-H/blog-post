@@ -1,8 +1,8 @@
 # MSQY 的文章备份！
-![文章数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/MSQY-H/blog-post/stats/stats.json&label=文章数&query=$.files&color=blue)
-![总字数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/MSQY-H/blog-post/stats/stats.json&label=总字数&query=$.words&color=green)
-![最后更新](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/MSQY-H/blog-post/stats/stats.json&label=最后更新&query=$.updated&color=blueviolet)
-![提交次数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/MSQY-H/blog-post/stats/stats.json&label=提交数&query=$.commits&color=red)
+![文章数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/MSQY-H/blog-post/stats/stats.json&query=$.files)
+![总字数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/MSQY-H/blog-post/stats/stats.json&query=$.words)
+![最后更新](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/MSQY-H/blog-post/stats/stats.json&query=$.updated)
+![提交次数](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/MSQY-H/blog-post/stats/stats.json&query=$.commits)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/LICENSE-CC%20BY--NC--SA%204.0-lightgrey?logo=creativecommons&logoColor=white)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 ![文章: 备份](https://img.shields.io/badge/文章-备份-2ea44f?logo=github)
 ![使用: Markdown](https://img.shields.io/badge/使用-Markdown-0077b5?logo=markdown)
