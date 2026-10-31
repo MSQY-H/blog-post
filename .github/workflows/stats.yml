@@ -1,0 +1,39 @@
+name: 更新文章统计徽章
+
+on:
+  push:
+    branches: [ main ]
+    paths: [ '**.md' ]
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 执行统计脚本
+        run: |
+          chmod +x stats.sh
+          ./stats.sh
+
+      - name: 提交并推送 stats.json 到 stats 分支
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          # 切换到 stats 分支（若不存在则新建）
+          git checkout --orphan stats || git checkout stats
+          # 只保留 stats.json，删除其他文件（可选，可保留）
+          # 为确保干净，可以只保留 stats.json，但保留其他也无妨
+          # 我们只添加 stats.json，忽略其他更改
+          git add -f stats.json
+          git commit -m "chore: 更新统计徽章数据 [skip ci]" || echo "无变更"
+          git push origin stats --force
