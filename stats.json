@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "files": {
+    "label": "文章数",
+    "message": "37",
+    "color": "blue"
+  },
+  "words": {
+    "label": "总字数",
+    "message": "150043",
+    "color": "green"
+  },
+  "updated": {
+    "label": "最后更新",
+    "message": "2026-08-26T16:04:06+08:00",
+    "color": "blueviolet"
+  },
+  "commits": {
+    "label": "提交数",
+    "message": "6",
+    "color": "red"
+  }
+}
